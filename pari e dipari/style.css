@@ -1,0 +1,28 @@
+body{
+    font-size: 18px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: rgb(162, 212, 250);
+}    
+ 
+section {
+    text-align: center;
+}
+
+h1 {
+    color: red;
+    font-size: 25px;
+    padding-bottom: 30px;
+}
+
+#PersooVinto {
+    text-decoration: underline;
+    font-size: 20px;
+    padding: 20px 0;
+    
+}
+
+.none {
+    display: none;
+}
+

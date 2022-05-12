@@ -34,3 +34,14 @@ let numUserHTML = document.querySelector("#numeroscelto").innerHTML = "Hai scelt
 let NumPCHTML = document.querySelector("#numeroPc").innerHTML = "Il Pc ha scelto il numero Random: " + numGenerato;
 let sommaHTML = document.querySelector("#somma").innerHTML = "La somma totale è: " + somma;
 let risultato = document.querySelector("#PersooVinto").innerHTML = pariDispari(somma);
+
+//BONUS
+
+
+    if ((somma % 2 === 0 && parDispNormalizzato === "pari") || (somma % 2 !== 0 && parDispNormalizzato === "dispari")) {
+        const noneclass = document.getElementById("imgVinto").classList;
+        noneclass.remove("none");
+    } else if ((somma % 2 !== 0 && parDispNormalizzato === "pari") || (somma % 2 === 0 && parDispNormalizzato === "dispari")) {
+        const noneclass2 = document.getElementById("imgPerso").classList;
+        noneclass2.remove("none");
+    }
