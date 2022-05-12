@@ -10,26 +10,27 @@ function getnumRandom(min, max){
 }
 
 let numGenerato = getnumRandom(1, 5);
-console.log(numGenerato);
 
 //sommo i due numeri
 let somma = numGenerato + numeroUser;
-console.log(somma);
 
 //definisco se somma pari o dispari
 parDispNormalizzato = pariDispariUser.toLowerCase()
 
 function pariDispari(somma) {
     if (somma % 2 === 0 && parDispNormalizzato === "pari"){
-        return ". È pari e quindi hai vinto.";
+        return "La somma è pari, complimenti hai vinto.";
     } else if (somma % 2 !== 0 && parDispNormalizzato === "dispari") { 
-        return ". È dispari e quindi hai vinto.";
+        return "La somma è dispari, complimenti hai vinto.";
     } else if (somma % 2 !== 0 && parDispNormalizzato === "pari"){
-        return ". È dispari... Mi dispiace ma hai perso.";
+        return "La somma è dispari... Mi dispiace ma hai perso.";
     } else if (somma % 2 === 0 && parDispNormalizzato === "dispari") {
-        return ". È pari... Mi dispiace ma hai perso.";
+        return "La somma è pari... Mi dispiace ma hai perso.";
     }
 }
+
 //stabilisco chi ha vinto
-let risultato = document.querySelector("h1")
-risultato.innerHTML = "La tua scelta è " + parDispNormalizzato + " e il numero che hai scelto è " + numeroUser + ". Il Pc invece ha scelto il numero random " + numGenerato + " per cui la somma è " + somma + pariDispari(somma);
+let numUserHTML = document.querySelector("#numeroscelto").innerHTML = "Hai scelto " + parDispNormalizzato + " e il numero " + numeroUser;
+let NumPCHTML = document.querySelector("#numeroPc").innerHTML = "Il Pc ha scelto il numero Random: " + numGenerato;
+let sommaHTML = document.querySelector("#somma").innerHTML = "La somma totale è: " + somma;
+let risultato = document.querySelector("#PersooVinto").innerHTML = pariDispari(somma);
