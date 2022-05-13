@@ -14,9 +14,9 @@ let numGenerato = getnumRandom(1, 5);
 //sommo i due numeri
 let somma = numGenerato + numeroUser;
 
-//definisco se somma pari o dispari
 parDispNormalizzato = pariDispariUser.toLowerCase()
 
+//definisco se somma pari o dispari
 
 
 function pariDispari(somma) {
@@ -27,6 +27,7 @@ function pariDispari(somma) {
          return "dispari";
      }
 }
+//stabilisco chi ha vinto
     
 function vinto() {
 
@@ -49,7 +50,6 @@ function vinto() {
     }
 }
 
-//stabilisco chi ha vinto
 let numUserHTML = document.querySelector("#numeroscelto").innerHTML = "Hai scelto " + parDispNormalizzato + " e il numero " + numeroUser;
 let NumPCHTML = document.querySelector("#numeroPc").innerHTML = "Il Pc ha scelto il numero Random: " + numGenerato;
 let sommaHTML = document.querySelector("#somma").innerHTML = "La somma totale è: " + somma;
